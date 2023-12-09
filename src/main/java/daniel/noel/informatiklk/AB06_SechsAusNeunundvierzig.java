@@ -124,6 +124,18 @@ public class AB06_SechsAusNeunundvierzig extends javax.swing.JFrame {
             this.lottoNumbers[i] = randomNumber;
         }
         
+        for (int i = 1; i < lottoNumbers.length; i++) {
+        int key = lottoNumbers[i];
+        int j = i - 1;
+
+        // Verschieben der Elemente von lottoNumbers[0..i-1], die größer als key sind, um eine Position nach rechts
+        while (j >= 0 && lottoNumbers[j] > key) {
+            lottoNumbers[j + 1] = lottoNumbers[j];
+            j = j - 1;
+        }
+        lottoNumbers[j + 1] = key;
+    }
+        
         String resultText = "";
         for (int i = 0; i < this.lottoNumbers.length; i++) {
             resultText = resultText + this.lottoNumbers[i] + "  ";
