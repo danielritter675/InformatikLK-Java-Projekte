@@ -30,7 +30,8 @@ public class InformatikLK {
         //AB06_SechsAusNeunundvierzig lottogeneratorGUI = new AB06_SechsAusNeunundvierzig();
         //lottogeneratorGUI.setVisible(true);
         
-        AB09_Fibonacci fibonacciGUI = new AB09_Fibonacci();
-        fibonacciGUI.setVisible(true);
+        //AB09_Fibonacci fibonacciGUI = new AB09_Fibonacci();
+        //fibonacciGUI.setVisible(true);
+        
     }
 }
