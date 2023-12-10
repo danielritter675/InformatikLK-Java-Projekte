@@ -33,5 +33,7 @@ public class InformatikLK {
         //AB09_Fibonacci fibonacciGUI = new AB09_Fibonacci();
         //fibonacciGUI.setVisible(true);
         
+        //AB09_GroessterGemeinsamerTeiler ggtGUI = new AB09_GroessterGemeinsamerTeiler();
+        //ggtGUI.setVisible(true);
     }
 }
