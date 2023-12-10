@@ -88,8 +88,8 @@ public class AB09_Fibonacci extends javax.swing.JFrame {
                         .addComponent(jLabel))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(40, 40, 40)
-                        .addComponent(outputInfoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(32, 32, 32)
+                        .addComponent(outputInfoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
                         .addComponent(outputLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -120,7 +120,34 @@ public class AB09_Fibonacci extends javax.swing.JFrame {
     }//GEN-LAST:event_inputFieldActionPerformed
 
     private void calculateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calculateButtonActionPerformed
-        // TODO add your handling code here:
+        try {
+            // Eingabe des Benutzers aus dem Textfeld lesen
+            int n = Integer.parseInt(inputField.getText());
+
+            // Überprüfen, ob die Eingabe gültig ist (nicht negativ)
+            if (n < 0) {
+                outputLabel.setText("Bitte eine positive Zahl eingeben");
+                return;
+            }
+
+            // Berechnung des n-ten Fibonacci-Glieds
+            int fibonacciResult = fibonacci(n);
+
+            // Anzeigen des Ergebnisses im outputLabel
+            outputLabel.setText(String.valueOf(fibonacciResult));
+        } catch (NumberFormatException e) {
+            // Fehlerbehandlung für ungültige Eingaben
+            outputLabel.setText("Ungültige Eingabe");
+        }
+    }
+
+// Rekursive Methode zur Berechnung des n-ten Glieds der Fibonacci-Folge
+    private int fibonacci(int n) {
+        if (n <= 1) {
+            return n;
+        } else {
+            return fibonacci(n - 1) + fibonacci(n - 2);
+        }
     }//GEN-LAST:event_calculateButtonActionPerformed
 
     /**
